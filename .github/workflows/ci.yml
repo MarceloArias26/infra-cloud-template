@@ -55,8 +55,6 @@ jobs:
             port: 8080
           - service: model
             port: 8081
-          - service: pow
-            port: 8090
     steps:
       - uses: actions/checkout@v4
 
