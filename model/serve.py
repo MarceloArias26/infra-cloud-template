@@ -107,7 +107,7 @@ def predict(req: PredictRequest) -> dict[str, object]:
     idx = int(proba.argmax())
     PREDICTIONS.inc()
     PREDICT_LATENCY.observe(time.time() - start)
-    return {"class": bundle["target_names"][idx], "confidence": float(proba[idx])}
+    return {"class": bundle["target_names"][idx], "confidence": float(proba[idx]), "model_version": "v1.1"}
 
 
 if __name__ == "__main__":
